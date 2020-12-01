@@ -1,0 +1,8 @@
+# Reports
+Crytica Reporting Web App
+Created by GR
+
+As we near Beta testing on our probing software. We needed an UX interface for reporting software. At its basic form, we can pull data from mySQL server and create simple charts. 
+*Have a calendar that displays dates with data.
+*Scripts to chunk given date into 15 min interval chunks to better view the data
+*Have 6 different reports to gaugue probe scan performance

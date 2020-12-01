@@ -1,0 +1,116 @@
+<!-- Submit to github 11-30-2020 by GR-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+  
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>            
+      </button>
+      <a class="navbar-brand" href="#"><img src="http://75.140.40.245:5480/cs.png" style="max-width:50px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="#">Age</a></li>
+        <li><a href="#">Gender</a></li>
+        <li><a href="#">Geo</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav d-none d-md-block">
+      <div class="container-fluid my-3">
+        <img src="http://75.140.40.245:5480/cs.png" style="max-width:150px">
+      </div>
+      
+      <ul class="nav nav-pills nav-stacked card d-flex flex-column text-center test">
+      
+        <li class="py-3">
+          <p>Available Dates: <input type = "text" id ="datepicker"></p>
+        </li>
+        <div class="d-flex flex-row">
+        <li class="py-3 px-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" 
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Choose a Time
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2" id="dropDownSelection">
+                
+            </div>
+        </li>
+        <li class="py-3 px-3">
+            <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenu2" 
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Choose a Report
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            
+              <button type="button" class="dropdown-item" onclick="getReportQuery(1)">Scan Time Report</button>
+              <button type="button" class="dropdown-item" onclick="getReportQuery(2)">Transmission Time Report</button>
+              <button type="button" class="dropdown-item" onclick="getReportQuery(3)">Crytica Standard Report</button>
+              <button type="button" class="dropdown-item" onclick="getReportQuery(4)">State-Change Notification Report</button>
+              <button type="button" class="dropdown-item" onclick="getReportQuery(5)">State-Change Notification Report (CS)</button>
+              <button type="button" class="dropdown-item" onclick="getReportQuery(6)">Alert Specific Report</button>
+            </div>
+        </li>
+        </div>
+      </ul><br>
+      <div class="card">
+        <h5>Quick Dates</h5>
+        <p> Here there will be dates that can be quickly selected.
+          Hence the title.
+        </p> 
+        <div class="px-3 py-3">
+          <button type ="button" class="btn btn-primary" onclick="getReport()"> Build Report</button>
+        </div> 
+      </div>
+      <div class="card py-3 my-3">
+        <h5>Data Count: 6594 scans</h5> 
+      </div>
+      
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="card">
+        <h4>Audit Ledger</h4><span><h6>(Kronos Server)</h6></span>
+        <p>Some text..</p>
+      </div>
+      
+  </div>
+</div>
+
+</body>
+</html>

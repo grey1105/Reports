@@ -229,7 +229,7 @@ function displayTimeButtons()
 // Gets the current # of scans in the DB. 
 function getDBCount()
 {
-    let query ='select count(*) count from cs_audit.alert_log;';
+    let query ='select count(*) count from cs_audit.v_alert_log;';
     $.post("http://75.140.40.245:5480/reports/getQueryData.php", {query:query})
     .done(function(data) 
     {
